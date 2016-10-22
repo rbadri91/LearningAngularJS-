@@ -1,6 +1,9 @@
-var app = angular.module("myFirstApp",[]);
-app.controller("PrimaryController",function($scope){
-	$scope.values=[
+'use strict';
+
+angular.module("myDetails").component("myDetails",{
+	templateUrl: 'primaryControllerPage.html',
+	controller: function PrimaryController(){
+	this.values=[
 	{
 		Name:"Badrinath",
 		University:"Stony Brook University",
@@ -17,4 +20,5 @@ app.controller("PrimaryController",function($scope){
 		Degree:"Masters in Some Other Engineering"
 	}
 	];
-});
+	}
+})

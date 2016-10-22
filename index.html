@@ -3,13 +3,11 @@
   <head>
     <meta charset="utf-8">
         <script src="angular.min.js"></script>
-        <script src="PrimaryController.js"></script>
+        <script src="module/app.module.js"></script>
+        <script src="module/primaryModule.js"></script>
+        <script src="contoller/PrimaryController.js"></script>
   </head>
-    <body  ng-controller="PrimaryController">
-   	<ul ng-repeat="value in values">
-   	<li>Name:{{value.Name}}</li>
-   	<li>University:{{value.University}}</li>
-   	<li>Degree:{{value.Degree}}</li>
-   	</ul>
+    <body>
+    <my-details></my-details>
      </body>
 </html>
