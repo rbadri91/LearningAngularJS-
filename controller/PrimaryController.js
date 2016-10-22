@@ -2,24 +2,12 @@
 
 angular.module("myDetails").component("myDetails",{
 	templateUrl: 'controller/primaryControllerPage.html',
-	controller: function PrimaryController(){
-	this.values=[
-	{
-		Name:"Badrinath",
-		University:"Stony Brook University",
-		Degree:"Masters in Computer Engineering"
-	},
-	{
-		Name:"Anon",
-		University:"Some University",
-		Degree:"Masters in Some Engineering"
-	},
-	{
-		Name:"Anon 2",
-		University:"Some other University",
-		Degree:"Masters in Some Other Engineering"
+	controller: function PrimaryController($http){
+		var self= this;
+		self.orderProp = 'age';
+
+		$http.get('students/students.json').then(function(response) {
+        	self.values = response.data;
+      });
 	}
-	];
-	this.orderProp = 'age';
-	}
-})
+});
