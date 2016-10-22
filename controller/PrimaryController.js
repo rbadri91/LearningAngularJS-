@@ -20,5 +20,6 @@ angular.module("myDetails").component("myDetails",{
 		Degree:"Masters in Some Other Engineering"
 	}
 	];
+	this.orderProp = 'age';
 	}
 })
