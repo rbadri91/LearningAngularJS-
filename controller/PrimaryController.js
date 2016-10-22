@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module("myDetails").component("myDetails",{
-	templateUrl: 'primaryControllerPage.html',
+	templateUrl: 'controller/primaryControllerPage.html',
 	controller: function PrimaryController(){
 	this.values=[
 	{
