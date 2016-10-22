@@ -1,11 +1,15 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="myFirstApp">
   <head>
     <meta charset="utf-8">
         <script src="angular.min.js"></script>
+        <script src="PrimaryController.js"></script>
   </head>
-    <body ng-app>
-    <input type="text" min="0" ng-model="testModel">
-   			 <h1>Hello {{testModel}}</h1>
+    <body  ng-controller="PrimaryController">
+   	<ul ng-repeat="value in values">
+   	<li>Name:{{value.Name}}</li>
+   	<li>University:{{value.University}}</li>
+   	<li>Degree:{{value.Degree}}</li>
+   	</ul>
      </body>
 </html>
